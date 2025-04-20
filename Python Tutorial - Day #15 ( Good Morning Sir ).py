@@ -1,5 +1,5 @@
 import time
-timestamp1 = time.strftime("%Y:%m:%d:%A") #%Y=YEAR, %m=MONTH, %d=day, %A= day of the week
+timestamp1 = time.strftime("%Y:%m:%d:%A:%B") #%Y=YEAR, %m=MONTH, %d=day, %A= day of the week, %B= month of the year
 timestamp2 = time.strftime("%H:%M:%S") #%H=HOUR, %M=MINUTE, %S=SECOND
 
 print(timestamp1) # Format: YYYY:MM:DD
