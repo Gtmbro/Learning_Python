@@ -11,9 +11,9 @@ print()
 #   for j in color:
 #     print(j)
 
-print("Multiplication table of 1:-\n")
-for k in range(10): #range(starting no., one step after ending no.)
-  print("1 x",k+1,"=",k+1)
+print("Multiplication table of 2:-\n")
+for k in range(1,11): #range(starting no., one step after ending no.)
+  print("2 x",k,"=",2*k)
 print()
 
 for m in range(5):
