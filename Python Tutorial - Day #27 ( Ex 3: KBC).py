@@ -1,3 +1,5 @@
+#Overall 97/100 but can improve the code to handle invalid inputs and 
+
 questions = ["1. What is the capital of Norway ?",
              "2. Which planet is known for having the most moons?",
              "3. Who painted the Mona Lisa?",
@@ -23,12 +25,12 @@ def kbc():
     user = input(options[i])
     if user.strip().lower() == answers[i].lower() or user.upper() == valid_answers[i]:
       money += 1000
-      print("Congratulations! You won",money)
-      print()
+      print("Congratulations! You won",money,end="\n\n")
+      # print()
     else:
-      print("You lost!")
+      print("You lost!",end="\n\n")
       break
-  print()
+  # print()
   print("You can take home",money)
 
 kbc()
