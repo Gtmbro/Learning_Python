@@ -29,10 +29,13 @@ alpha = [
   "B"
 ]
 
+money = [1000,2000,3000,5000,10000]
+
 for i in range(5):
-  print(questions[i])
-  print(options[i])
-  user = input()
+  user = input(f"Question for {money[i]}:-\n{questions[i]}\n{options[i]}")
+  # print(questions[i])
+  # print(options[i])
+  # user = input()
   if user.strip().lower() == answers[i] or user.strip().upper() == alpha[i]:
-    print("Correct")
+    print("Congratulations! You won",money[i],end="\n\n")
     print()
