@@ -31,11 +31,26 @@ alpha = [
 
 money = [1000,2000,3000,5000,10000]
 
-for i in range(5):
-  user = input(f"Question for {money[i]}:-\n{questions[i]}\n{options[i]}")
-  # print(questions[i])
-  # print(options[i])
-  # user = input()
-  if user.strip().lower() == answers[i] or user.strip().upper() == alpha[i]:
-    print("Congratulations! You won",money[i],end="\n\n")
+
+def kbc ():
+  a = 0
+  i = 0
+  for i in range(5):
+    user = input(f"Question for {money[i]}:-\n{questions[i]}\n{options[i]}")
+
+    if user.strip().capitalize() == answers[i] or user.strip().upper() == alpha[i]:
+      print("Congratulations! You won",money[i],end="\n\n")
+      a = money[i]
+    else:
+      # print("You lost!",end="\n\n")
+      break
     print()
+
+  if i != 0:
+    print("You have successfully won Rs.",a)
+  else:
+    print("WRONG ANSWER!")
+    print("You didn't win anything!")
+
+kbc()
+
