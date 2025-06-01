@@ -23,7 +23,7 @@ def code():
 
 
 def decode():
-  if len(word)<=7:
+  if len(word)<=6:
     reverse2 = word[::-1] 
     print (reverse2)
 
