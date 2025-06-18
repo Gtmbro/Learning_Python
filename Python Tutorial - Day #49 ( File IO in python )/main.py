@@ -4,6 +4,6 @@ text = [
 ]
 
 with open('explain.txt','w') as a:
-  # a.write(text) If the variable doen't have any list
+  # a.write(text) If the variable doesn't have any list
   a.writelines(text) # If the variable has a list
 
