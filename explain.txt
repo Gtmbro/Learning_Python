@@ -1,0 +1,2 @@
+This file is for explaining what is happening in the code.
+This will be explained as the code becomes more complex.
