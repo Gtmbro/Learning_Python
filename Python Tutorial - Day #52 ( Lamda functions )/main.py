@@ -1,4 +1,3 @@
-
 # def fibonacci(n):
 #   a = 0
 #   b = 1
@@ -8,8 +7,8 @@
 
 # fibonacci(4)
 
-def akl(fx, value):
-  return 2 + fx(value)
+def akl(sqr, value):
+  return sqr(value) # sqr has got x*x function and value 2, so it applies x*x on 2.
 
 # avg = lambda a,b : (a+b)/2
 # cube = lambda y: y*y*y
