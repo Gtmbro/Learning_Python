@@ -1,62 +1,35 @@
-book_objs_list = []
-
 class Library:
-  no_of_books = 0
-  def __init__(self, book, author):
-    self.book = book
-    self.author = author
-    # self.books_list = []
-    Library.no_of_books += 1
-  
-  def show_book(self):
-    return self.book
+  def __init__(self, books=None):
+    self.books = books if books else []
+
+  @property
+  def Books_Count(self):
+    return len(self.books)
+
+  def adder(self, book, author):
+    self.books.append({"book":book,"author":author})
     
-  def show_author(self):
-    return self.author
+  
+  def ShowInfo(self):
+    for count, item in enumerate (self.books, start=1):
+      print(f"\nFor book no.{count} {item['book']}, author is: {item['author']}")
 
-  def length_book(self):
-    return len(self.book)
+library = Library()
 
-  def length_author(self):
-    return len(self.author)
-
-#Adder for adding books
-def adder(item):
-  book_objs_list.append(item)
-
-#------------------User Input Section-----------------------
-decision = input("Enter 'y' to add information and anything else to exit: ").lower()
+decision = input("Enter y to add info: ").lower()
 
 while decision == "y":
-  book_name = input("\nEnter the name of the book: ").capitalize()
-  author = input(f"\nEnter the name of the author of {book_name}: ").capitalize()
+  book = input("\nEnter book: ").capitalize()
+  author = input("\nEnter author: ").capitalize()
 
-
-  if not book_name and not author:
+  if not book and not author:
     break
-  book_obj = Library(book_name, author)
-  adder(book_obj)
-  
-  decision = input("\nEnter 'y' to add information again\n"
-                   "Anything else to exit: ").lower()
+    
+  library.adder(book, author)
+  decision = input("\nEnter y again to add info: ").lower()
 
-if not book_objs_list:
+if not library.books:
   exit()
-#-------------------------EXECUTION------------------------------
-number = Library.no_of_books
-
-if number == 1:
-  print("\nYou have added 1 book in total.\n")
-elif number != 1:
-  print(f"\nYou have added {number} books in total.\n")
-
-
-max_l_book = max(a.length_book() for a in book_objs_list)
-max_l_author = max(a.length_author() for a in book_objs_list)
-
-print(f"| {'Book':<{max_l_book}} | {'Author':<{max_l_author}} |")
-print("-"*(max_l_book + max_l_author + 7))
-
-#--------------------------Result---------------------------------
-for book in book_objs_list:
-  print(f"| {book.show_book():<{max_l_book}} | {book.show_author():<{max_l_author}} |")
+  
+print(f"\nYou added {library.Books_Count} books in total")
+library.ShowInfo()
