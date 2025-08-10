@@ -12,7 +12,7 @@ class Mother:
   def show(self):
     return(f"Mother is: {self.mother}")
 
-class Family(Father, Mother): #Class family inherited Father and Mother classes.
+class Family(Father, Mother): #Class family inherited Father and Mother classes and their methods.
   def __init__(self, father, mother, son):
     self.father = father
     self.mother = mother
