@@ -1,6 +1,6 @@
-
 # # !/usr/bin/ env python3
 # # ^ A "Shebang" to tell terminal to use python3
+
 # import sys
 # # print (sys.argv) #Returns a list of arguments I pass..
 # name = sys.argv[1] #Takes 2nd argument to make it name..
