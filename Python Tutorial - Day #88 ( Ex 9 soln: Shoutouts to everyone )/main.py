@@ -1,4 +1,4 @@
-# For Mac
+# For Mac:-
 
 # from os import system
 
