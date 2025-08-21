@@ -1,7 +1,6 @@
-
 import time
 
-print("Get ready to do crazy stuff.")
+print("Get ready for fun.")
 for i in range(1, 5):
     print(i)
     time.sleep(1)
