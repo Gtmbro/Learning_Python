@@ -26,4 +26,4 @@ if response.status_code == 200:
     for article in articles:
         print(f"Title: {article['title']}")
         print(f"Description:\n {article['description']}")
-        print(f"Url: {article['url']}")
+        print(f"Url: {article['url']}\n")
